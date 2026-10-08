@@ -6,19 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:seed": "tsx scripts/seed.ts",
+    "ingest:prices": "tsx scripts/ingest-prices.ts",
+    "ingest:research": "tsx scripts/ingest-research.ts",
+    "ingest:analysts": "tsx scripts/ingest-analysts.ts",
+    "recompute:scores": "tsx scripts/recompute-scores.ts",
+    "check:env": "tsx scripts/check-env.ts"
   },
   "dependencies": {
+    "@clerk/nextjs": "^7.4.2",
+    "@neondatabase/serverless": "^1.1.0",
+    "clsx": "^2.1.1",
+    "csv-parse": "^6.2.1",
+    "drizzle-orm": "^0.45.2",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "resend": "^6.12.4",
+    "svix": "^1.95.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

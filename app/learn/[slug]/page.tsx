@@ -1,0 +1,4 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { ARTICLES } from '@/lib/articles'
+export default async function ArticlePage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const article=ARTICLES.find(a=>a.slug===slug);if(!article)notFound();return <main className="C pricing-page" style={{maxWidth:780}}><Link href="/learn">← All articles</Link><header className="pricing-header"><div className="hbadge">{article.category}</div><h1>{article.title}</h1><p>{article.summary}</p></header>{article.paragraphs.map(t=><p key={t} style={{fontSize:17,lineHeight:1.8,marginBottom:24}}>{t}</p>)}<p className="pricing-footnote">Market analysis and education, not investment advice.</p><Link href="/analysts" className="plan-action">Explore analyst research</Link></main>}

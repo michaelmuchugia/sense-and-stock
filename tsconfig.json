@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "server-only": ["./lib/internal/server-only.ts"]
     }
   },
   "include": [

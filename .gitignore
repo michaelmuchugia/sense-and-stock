@@ -32,6 +32,18 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# ingest drop-zones (operator transcriptions live here, may contain
+# copyrighted PDF excerpts and other sensitive data)
+/ingest/
+!ingest/.gitkeep
+!ingest/prices/.gitkeep
+!ingest/prices/sample.csv.example
+!ingest/research/.gitkeep
+!ingest/research/sample.json.example
+!ingest/analysts/.gitkeep
+!ingest/analysts/sample.json.example
 
 # vercel
 .vercel
